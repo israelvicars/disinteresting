@@ -1,7 +1,0 @@
-<p>Hey <%= @resource.email %>!</p>
-
-<p>Your account has been locked down to an excessive number of botched sign in attempts.</p>
-
-<p>You need to click the link below to unlock your account or get out:</p>
-
-<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
