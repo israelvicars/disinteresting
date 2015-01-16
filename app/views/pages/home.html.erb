@@ -1,8 +1,12 @@
 <div class="jumbotron center">
     <h1>Dis is my app.</h1>
     <p>There are many like it, but dis one is mine.</p>
+  <% if user_signed_in? %>
+      # do something
+  <% else %>
       <p>
-        <%= link_to "Log in", "#", class: "btn btn-default btn-lg" %>
-        <%= link_to "Sign up", "#", class: "btn btn-primary btn-lg" %>
+        <%= link_to "Sign in", new_user_session_path, class: "btn btn-default btn-lg" %>
+        <%= link_to "Join", new_user_registration_path, class: "btn btn-primary btn-lg" %>
       </p>
+  <% end %>
 </div>
